@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inconsolata'),
+        url('/src/assets/fonts/Inconsolata-Regular.woff2'),
+        url('/src/assets/fonts/Inconsolata-Regular.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Inconsolata-Bold'),
+        url('/src/assets/fonts/Inconsolata-Bold.woff2'),
+        url('/src/assets/fonts/Inconsolata-Bold.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inter'),
+        url('/src/assets/fonts/Inter-Regular.woff2'),
+        url('/src/assets/fonts/Inter-Regular.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Inter-Bold'),
+        url('/src/assets/fonts/Inter-Bold.woff2'),
+        url('/src/assets/fonts/Inter-Bold.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lora'),
+        url('/src/assets/fonts/Lora-Regular.woff2'),
+        url('/src/assets/fonts/Lora-Regular.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lora'),
+        url('/src/assets/fonts/Lora-Bold.woff2'),
+        url('/src/assets/fonts/Lora-Bold.woff'), ;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lora'),
+        url('/src/assets/fonts/Lora-BoldItalic.woff2'),
+        url('/src/assets/fonts/Lora-BoldItalic.woff'), ;
+    font-display: swap;
+}

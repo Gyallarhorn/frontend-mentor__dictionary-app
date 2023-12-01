@@ -1,0 +1,165 @@
+.top-part {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.customizaion {
+    position: relative;
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customization__font {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &::after {
+        display: block;
+        width: 12px;
+        height: 12px;
+        content: '';
+        background: url('../../../assets/img/icon-arrow-down.svg') center no-repeat;
+    }
+}
+
+.customization__font-list {
+    position: absolute;
+    top: 39px;
+    right: 0px;
+    z-index: 2;
+    min-width: 183px;
+    padding: 16px 24px;
+    margin: 0;
+    list-style: none;
+    pointer-events: none;
+    background-color: var(--background-color);
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    transition: background-color .5s ease,
+        transform .5s ease,
+        opacity .5s ease;
+    transform: translateY(20px);
+}
+
+.customization__font-list--active {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.customization__font-item {
+    position: relative;
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color .5s ease;
+}
+
+.customization__font-item:hover,
+.customization__font-item:focus {
+    color: var(--tertiary-text-color);
+}
+
+
+.customization__current-font {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color .5s ease;
+}
+
+.theme {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        width: 1px;
+        height: 32px;
+        content: '';
+        background-color: var(--line-color);
+        transform: translateY(-50%);
+    }
+}
+
+.theme__button {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--secondary-text-color);
+    border: none;
+    border-radius: 10px;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        z-index: 2;
+        width: 14px;
+        height: 14px;
+        content: '';
+        background-color: var(--toggle-color);
+        border-radius: 50%;
+        transition: transform .5s ease-in-out;
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        content: '';
+        background-color: var(--tertiary-text-color);
+        transition: width .5s ease-in-out;
+    }
+}
+
+.theme__button.theme__button--active {
+    &::before {
+        transform: translate(20px, -50%);
+    }
+
+    &::after {
+        width: 100%;
+    }
+}
+
+.theme__icon--dark path {
+    stroke: var(--tertiary-text-color);
+    transition: stroke .5s ease;
+}
+
+@media (min-width: 768px) {
+    .top-part {
+        padding: 58px 0 52px 0;
+    }
+
+    .customization__current-font,
+    .customization__font-item {
+        font-size: 18px;
+    }
+
+    .customization__font {
+        gap: 18px;
+    }
+}
