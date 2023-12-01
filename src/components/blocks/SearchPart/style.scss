@@ -1,0 +1,117 @@
+.search-part {
+    position: relative;
+    padding: 0 0 28px 0;
+}
+
+.lora .search-part {
+    padding: 0 0 23px 0;
+}
+
+.inter .search-part {
+    padding: 0 0 24px 0;
+}
+
+.search-part__label {
+    display: block;
+}
+
+.search-part__input {
+    width: 100%;
+    padding: 16px 24px 15px 24px;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--text-color);
+    background-color: var(--search-background);
+    border: none;
+    border-radius: 16px;
+    transition: background-color .3s ease,
+        color .3s ease;
+}
+
+.inter .search-part__input,
+.lora .search-part__input {
+    padding: 14px 24px;
+}
+
+
+.search-part__input::placeholder {
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    opacity: 0.25;
+}
+
+.search-part__input:hover::placeholder {
+    opacity: 0.5;
+}
+
+.search-part__input:active,
+.search-part__input:focus {
+    outline: 1px solid var(--tertiary-text-color);
+}
+
+.search-part__input.invalid {
+    outline: 1px solid var(--invalid-color);
+}
+
+.search-part__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    cursor: pointer;
+    background: url('../../../assets/img/icon-search.svg') center no-repeat;
+    background-color: transparent;
+    border: none;
+}
+
+.search-part__error {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    display: block;
+    font-feature-settings: 'clig' off, 'liga' off;
+    color: var(--invalid-color);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.shaking {
+    animation: shake 1.5s ease forwards;
+}
+
+@media (min-width: 768px) {
+    .search-part {
+        padding: 0 0 50px 0;
+    }
+
+    .lora .search-part {
+        padding: 0 0 41px 0;
+    }
+
+    .inter .search-part {
+        padding: 0 0 43px 0;
+    }
+
+    .search-part__input {
+        padding: 22px 24px 21px 24px;
+        font-size: 20px;
+    }
+
+    .inter .search-part__input {
+        padding: 20px 24px;
+    }
+
+    .lora .search-part__input {
+        padding: 19px 24px 20px 24px;
+    }
+
+    .search-part__button {
+        padding: 31px;
+    }
+
+    .search-part__error {
+        top: 74px;
+    }
+}

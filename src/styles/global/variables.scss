@@ -1,0 +1,33 @@
+:root {
+    --background-color: #fff;
+    --text-color: #2d2d2d;
+    --secondary-text-color: #757575;
+    --tertiary-text-color: #a445ed;
+    --line-color: #e9e9e9;
+    --toggle-color: #fff;
+    --box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+    --search-background: #f4f4f4;
+    --invalid-color: #ff5252;
+}
+
+.dark {
+    --background-color: #050505;
+    --text-color: #fff;
+    --box-shadow:0px 5px 30px 0px #A445ED;
+    --search-background: #1f1f1f;
+}
+
+.mono {
+    --primary-font: 'Inconsolata', 'Lucida Console', monospace;
+    font-family: var(--primary-font);
+}
+
+.inter {
+    --primary-font: 'Inter', sans-serif; 
+    font-family: var(--primary-font);
+}
+
+.lora {
+    --primary-font: 'Lora', serif;
+    font-family: var(--primary-font);
+}
