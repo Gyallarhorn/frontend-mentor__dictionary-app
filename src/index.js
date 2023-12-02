@@ -6,7 +6,7 @@ import { ThemeProvider } from './Theme';
 import { FontProvider } from './Fonts';
 import { WordProvider } from './Word';
 
-const root = ReactDOM.createRoot(document.querySelector('body'));
+const root = ReactDOM.createRoot(document.querySelector('#app'));
 root.render(
   <ThemeProvider>
     <FontProvider>

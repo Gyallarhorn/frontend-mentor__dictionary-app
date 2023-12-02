@@ -34,7 +34,7 @@ function WordProvider({ children }) {
   };
 
   useEffect(() => {
-    const refreshWord = () => {
+    const refreshWord = async () => {
       localStorage.setItem('word', currentWord);
     };
 
@@ -47,7 +47,7 @@ function WordProvider({ children }) {
     searchWord,
     toggleWord,
     setInfo,
-  }), [currentWord]);
+  }), [currentWord, foundedInfo]);
 
   return (
     <WordContext.Provider value={contextValue}>
