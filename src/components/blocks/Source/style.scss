@@ -1,0 +1,140 @@
+.source {
+    padding: 26px 0 63px 0;
+    border-top: 1px solid var(--line-color);
+}
+
+.source__title {
+    position: relative;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-feature-settings: 'clig' off, 'liga' off;
+    line-height: normal;
+    color: var(--secondary-text-color);
+
+    &::after {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 42px;
+        height: 1px;
+        content: '';
+        background-color: var(--secondary-text-color);
+    }
+}
+
+.source__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.source-list__item {
+    font-size: 14px;
+    line-height: normal;
+}
+
+.source-list__link {
+    position: relative;
+    color: var(--text-color);
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 12px;
+        height: 12px;
+        content: '';
+        background: url('../../../assets/img/icon-new-window.svg') center no-repeat;
+    }
+
+    &::before {
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        content: '';
+        background-color: var(--text-color);
+        transition: width .5s ease;
+        transform: translateX(-50%);
+    }
+
+    &:hover::before,
+    &:focus::before {
+        width: 100%;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.lora, 
+.inter {
+    .source {
+        padding: 24px 0 84px 0;
+    }
+    
+    .source__title {
+        margin: 0 0 7px 0;
+    
+        &::after {
+            bottom: 0;
+            width: 46px;
+        }
+    }
+
+    .source__list {
+        gap: 7px;
+    }
+
+    .source-list__link {
+        &::after {
+            top: 2px;
+            right: -27px;
+        }
+    }
+}
+
+.inter {
+    .source-list__link {
+        &::after {
+            top: 2px;
+            right: -21px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .source {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 25px;
+        align-items: start;
+        padding: 21px 0 118px 0;
+    }
+    
+    .source__title {
+        margin: 0;
+    }
+
+    .source__list {
+        gap: 15px;
+    }
+
+    .lora
+    .inter {
+        .source {
+            gap: 21px;
+            padding: 19px 0 117px 0;
+        }
+
+        .source__list {
+            gap: 15px;
+        }
+    }
+}
