@@ -7,7 +7,6 @@ function Word({ word, phonetic, audio }) {
 
   const playAudio = (e) => {
     if ((e.target.classList.contains('play-button') || e.target.closest('.play-button'))) {
-      console.log(audioRef.current.src);
       audioRef.current.play();
     }
   };
