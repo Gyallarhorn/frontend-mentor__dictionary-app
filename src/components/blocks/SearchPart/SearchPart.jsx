@@ -1,22 +1,26 @@
 import React, {
-  useContext, useEffect, useRef, useState,
+  useContext, useEffect, useState,
 } from 'react';
 import './style.scss';
 import { WordContext } from '../../../Word';
 
 function SearchPart() {
-  const input = useRef(null);
   const [inputError, setInputError] = useState(false);
   const { toggleWord, currentWord } = useContext(WordContext);
+  const [inputWord, setInputWord] = useState(currentWord);
 
   const handleButtonClick = () => {
-    if (!input.current.value) {
+    if (!inputWord.trim()) {
       setInputError(true);
     } else {
       setInputError(false);
-      toggleWord(input.current.value);
+      toggleWord(inputWord.trim());
     }
   };
+
+  useEffect(() => {
+    setInputWord(currentWord);
+  }, [currentWord]);
 
   const handleinputKeyDown = (e) => {
     if (e.code === 'Enter') {
@@ -25,7 +29,8 @@ function SearchPart() {
   };
 
   const handleChange = (e) => {
-    e.target.value = e.target.value.replace(/[^A-Za-z' ]/g, '').replace(/\s+/g, ' ');
+    const newValue = e.target.value.replace(/[^A-Za-z' ]/g, '').replace(/\s+/g, ' ');
+    setInputWord(newValue);
   };
 
   return (
@@ -38,9 +43,9 @@ function SearchPart() {
           name="search"
           id="search"
           placeholder="Search for any word…"
-          ref={input}
           onKeyDown={handleinputKeyDown}
           onChange={(e) => handleChange(e)}
+          value={inputWord}
         />
       </label>
       <button className="search-part__button" type="button" aria-label="search button" onClick={handleButtonClick} />
