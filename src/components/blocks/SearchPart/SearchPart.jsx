@@ -1,5 +1,5 @@
 import React, {
-  useContext, useRef, useState,
+  useContext, useEffect, useRef, useState,
 } from 'react';
 import './style.scss';
 import { WordContext } from '../../../Word';
@@ -7,9 +7,9 @@ import { WordContext } from '../../../Word';
 function SearchPart() {
   const input = useRef(null);
   const [inputError, setInputError] = useState(false);
-  const { toggleWord } = useContext(WordContext);
+  const { toggleWord, currentWord } = useContext(WordContext);
 
-  const handleButtonClick = async () => {
+  const handleButtonClick = () => {
     if (!input.current.value) {
       setInputError(true);
     } else {
@@ -25,7 +25,7 @@ function SearchPart() {
   };
 
   const handleChange = (e) => {
-    e.target.value = e.target.value.replace(/[^A-Za-z]/g, '');
+    e.target.value = e.target.value.replace(/[^A-Za-z' ]/g, '').replace(/\s+/g, ' ');
   };
 
   return (
