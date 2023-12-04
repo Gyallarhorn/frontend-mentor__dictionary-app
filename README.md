@@ -2,7 +2,7 @@
 
 This is my solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
-- Live Site URL: [Dictionary App](https://your-live-site-url.com)
+- Live Site URL: [Dictionary App](http://Gyallarhorn.github.io/frontend-mentor__dictionary-app)
 
 ## Table of contents
 
