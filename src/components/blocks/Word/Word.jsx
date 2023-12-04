@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React, { useEffect, useRef } from 'react';
 import './style.scss';
 import PropTypes from 'prop-types';
@@ -6,7 +7,7 @@ function Word({ word, phonetic, audio }) {
   const audioRef = useRef(null);
 
   const playAudio = (e) => {
-    if ((e.target.classList.contains('play-button') || e.target.closest('.play-button'))) {
+    if (e.target.closest('.play-button')) {
       audioRef.current.play();
     }
   };
@@ -30,9 +31,7 @@ function Word({ word, phonetic, audio }) {
           className="play-button"
           aria-label="Play audio"
         >
-          <audio ref={audioRef}>
-            <source src={audio} type="audio/mp3" />
-            <track kind="captions" srcLang="en" label={word} />
+          <audio ref={audioRef} src={audio}>
             Тег аудио не поддерживается вашим браузером
           </audio>
         </button>

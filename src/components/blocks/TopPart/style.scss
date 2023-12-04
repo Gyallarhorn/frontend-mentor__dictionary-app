@@ -20,13 +20,24 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: color .1s ease;
 
     &::after {
+        position: relative;
         display: block;
         width: 12px;
         height: 12px;
         content: '';
         background: url('../../../assets/img/icon-arrow-down.svg') center no-repeat;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        animation: arrow-down .8s ease;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 
@@ -64,13 +75,16 @@
     font-weight: 700;
     cursor: pointer;
     transition: color .5s ease;
-}
 
-.customization__font-item:hover,
-.customization__font-item:focus {
-    color: var(--tertiary-text-color);
-}
+    &:hover,
+    &:focus {
+         color: var(--tertiary-text-color);
+    }
 
+    &:focus {
+        outline: none;
+    }
+}
 
 .customization__current-font {
     position: relative;

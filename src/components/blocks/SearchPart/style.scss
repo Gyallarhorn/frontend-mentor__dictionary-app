@@ -31,31 +31,30 @@
     border-radius: 16px;
     transition: background-color .3s ease,
         color .3s ease;
+
+    &::placeholder {
+        font-family: var(--primary-font);
+        color: var(--text-color);
+        opacity: 0.25;
+    }
+
+    &:hover::placeholder {
+        opacity: 0.5;
+    }
+
+    &:active,
+    &:focus {
+        outline: 1px solid var(--tertiary-text-color);
+    }
+
+    &.invalid {
+        outline: 1px solid var(--invalid-color);
+    }
 }
 
 .inter .search-part__input,
 .lora .search-part__input {
     padding: 14px 24px;
-}
-
-
-.search-part__input::placeholder {
-    font-family: var(--primary-font);
-    color: var(--text-color);
-    opacity: 0.25;
-}
-
-.search-part__input:hover::placeholder {
-    opacity: 0.5;
-}
-
-.search-part__input:active,
-.search-part__input:focus {
-    outline: 1px solid var(--tertiary-text-color);
-}
-
-.search-part__input.invalid {
-    outline: 1px solid var(--invalid-color);
 }
 
 .search-part__button {
@@ -67,6 +66,16 @@
     background: url('../../../assets/img/icon-search.svg') center no-repeat;
     background-color: transparent;
     border: none;
+    transition: transform .3s ease;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .search-part__error {
