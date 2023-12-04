@@ -11,7 +11,7 @@ const config = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     clean: true,
     assetModuleFilename: 'assets/[name][ext]',
   },
@@ -20,7 +20,7 @@ const config = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'build'),
     },
     open: true,
     port: 9000,
