@@ -11,7 +11,6 @@ function Content() {
   let phonetic = '';
   let audio = '';
 
-  console.log(foundedInfo);
   const [word] = foundedInfo.map((obj) => obj.word);
   const [phonetics] = foundedInfo.map((obj) => obj.phonetics);
   if (phonetics.length > 0) {
