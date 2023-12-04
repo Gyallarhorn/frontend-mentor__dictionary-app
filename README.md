@@ -2,11 +2,12 @@
 
 This is my solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
+- Live Site URL: [Dictionary App](https://your-live-site-url.com)
+
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
@@ -27,11 +28,6 @@ Users are able to:
 - Switch between light and dark themes
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page. Changes in all interactive elements occur smoothly using animations and transition properties
-
-### Links
-
-- Solution URL: [GitHub](https://github.com/Gyallarhorn/frontend-mentor__dictionary-app)
-- Live Site URL: [Dictionary App](https://your-live-site-url.com)
 
 ## My process
 
